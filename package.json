@@ -1,6 +1,6 @@
 {
   "name": "bloom-filter-tools",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Probabilistic set membership using a compact bit array and tunable false positives.",
   "type": "module",
   "main": "src/index.js",
