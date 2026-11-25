@@ -40,3 +40,10 @@ A Bloom filter answers "is this item in the set?" using far less memory than sto
 ## Edge case to know about
 
 `count` counts every `add` call, including duplicates. The false-positive estimate is only accurate when you add distinct values. If you add the same value repeatedly, the estimate will overstate the real error rate.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
